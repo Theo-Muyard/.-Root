@@ -8,7 +8,7 @@ export default {
 	once: false,
 	async execute(member)
 	{
-	const userMessags = [
+	const userMessages = [
 			`Hey <@${member.user.id}>, glad you joined us! We're excited to code, learn and share with you !`,
 			`System log: New programmer detected, <@${member.user.id}> has entered the chat.`,
 			`Welcome <@${member.user.id}>! Your coding journey starts here. Let's make it epic!`,
@@ -32,8 +32,8 @@ export default {
 		}
 		else
 		{
-			const randomIndex = Math.floor(Math.random() * userMessags.length);
-			await member.client.channels.cache.get(userMessags[randomIndex]);
+			const randomIndex = Math.floor(Math.random() * userMessages.length);
+			await member.client.channels.cache.get(userMessages[randomIndex]).send(userMessages[randomIndex]);
 		}
 	}
 }

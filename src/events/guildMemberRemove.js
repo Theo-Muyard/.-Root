@@ -8,7 +8,7 @@ export default {
 	once: false,
 	async execute(member)
 	{
-		const userMessags = [
+		const userMessages = [
 			`Error 404: <@${member.user.id}> not found in server.`,
 			`System log: <@${member.user.id}> has left the project. Commit history will remember them.`,
 			`Goodbye, <@${member.user.id}>! Your session has ended.`,
@@ -32,8 +32,8 @@ export default {
 		}
 		else
 		{
-			const randomIndex = Math.floor(Math.random() * userMessags.length);
-			await member.client.channels.cache.get(process.env.CHAT_CHANNEL_ID).send(userMessags[randomIndex]);
+			const randomIndex = Math.floor(Math.random() * userMessages.length);
+			await member.client.channels.cache.get(process.env.CHAT_CHANNEL_ID).send(userMessages[randomIndex]);
 		}
 	}
 }
