@@ -33,7 +33,7 @@ export default {
 		else
 		{
 			const randomIndex = Math.floor(Math.random() * userMessages.length);
-			await member.client.channels.cache.get(userMessages[randomIndex]).send(userMessages[randomIndex]);
+			await member.client.channels.cache.get(process.env.CHAT_CHANNEL_ID).send(userMessages[randomIndex]);
 		}
 	}
 }
