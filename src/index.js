@@ -13,6 +13,4 @@ client.commands = new Collection();
 deployCommands(client);
 deployEvents(client);
 
-console.log('test : ', process.env.TEST)
-console.log("Loaded token length:", process.env.TOKEN?.length);
 client.login(process.env.TOKEN);
