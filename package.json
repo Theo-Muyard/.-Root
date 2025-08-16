@@ -1,0 +1,15 @@
+{
+  "name": "origin-bot",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "The official ./Origin's BOT",
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.1"
+  }
+}
