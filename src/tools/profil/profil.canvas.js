@@ -5,8 +5,8 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-registerFont(path.resolve(__dirname, '../assets/fonts/Roboto-Regular.ttf'), { family: 'Roboto', weight: 'normal' });
-registerFont(path.resolve(__dirname, '../assets/fonts/Roboto-Bold.ttf'), { family: 'Roboto', weight: 'bold' });
+registerFont(path.resolve(__dirname, '../../assets/fonts/Roboto-Regular.ttf'), { family: 'Roboto', weight: 'normal' });
+registerFont(path.resolve(__dirname, '../../assets/fonts/Roboto-Bold.ttf'), { family: 'Roboto', weight: 'bold' });
 
 function roundRect(ctx, x, y, width, height, radius) {
 	ctx.beginPath();
