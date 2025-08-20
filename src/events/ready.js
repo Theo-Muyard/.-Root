@@ -23,7 +23,7 @@ export default {
 	{
 		const	totalMembers = client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0);
 
-		console.log(`Le bot est en ligne. (${client.user.tag})`);
+		console.log(`The bot is ready. (${client.user.tag})`);
 		setInterval(() => updatePresence(client), 1 * 60 * 1000);
 	}
 }

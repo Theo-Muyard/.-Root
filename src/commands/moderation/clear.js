@@ -14,9 +14,6 @@ export default {
 	{
 		const	number = interaction.options.getNumber('number');
 
-		const	messages = await interaction.channel.messages.fetch();
-		const	nbrMessages = messages.size
-
 		if (number < 1 || number > 100)
 		{
 			return interaction.reply({
