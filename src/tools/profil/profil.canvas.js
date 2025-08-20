@@ -1,5 +1,11 @@
 import path from "path"
-import { createCanvas, loadImage } from 'canvas'
+import { createCanvas, loadImage, registerFont } from 'canvas'
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+registerFont(path.resolve(__dirname, '../assets/fonts/Roboto-Regular.ttf'), { family: 'Roboto', weight: 'normal' });
+registerFont(path.resolve(__dirname, '../assets/fonts/Roboto-Bold.ttf'), { family: 'Roboto', weight: 'bold' });
 
 function roundRect(ctx, x, y, width, height, radius) {
 	ctx.beginPath();
@@ -20,16 +26,16 @@ async function getCanva(userDB)
 {
 	const	canvas = createCanvas(800, 120);
 	const	ctx = canvas.getContext('2d');
-	const	bgPath = path.resolve('src/assets/img/level.png');
+	const bgPath = path.resolve(__dirname, '../assets/img/level.png');
 	const	bg = await loadImage(bgPath);
 
 	ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
 
 	// LEVEL AND XP
-	ctx.font = 'bold 32px sans-serif';
+	ctx.font = 'bold 32px "Roboto"';
 	ctx.fillStyle = '#00d2ff'
 	ctx.fillText(`Level ${userDB.stats.level}`, 35, 50);
-	ctx.font = '24px sans-serif ';
+	ctx.font = '24px "Roboto"';
 	ctx.fillText(`XP: ${userDB.stats.xp} / ${userDB.stats.xpMax}`, 35, 90)
 
 	// PROGRESS BAR
