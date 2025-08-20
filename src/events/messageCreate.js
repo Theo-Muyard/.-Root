@@ -12,7 +12,7 @@ export default {
 		const	user = message.member.user;
 		const	DISBOARD_ID = '302050872383242240';
 
-		xpSystem(user);
+		xpSystem(user, message);
 		if (message.author.id === DISBOARD_ID && message.embeds.length > 0) {
 			const embed = message.embeds[0];
 			if (embed.description && embed.description.includes("Bump effectué")) {

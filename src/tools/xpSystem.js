@@ -2,7 +2,7 @@ import userModel from '../schemas/user.schema.js'
 import { config } from 'dotenv'
 
 config();
-export async function	xpSystem(user)
+export async function	xpSystem(user, message)
 {
 	if (user.bot) return;
 		try
