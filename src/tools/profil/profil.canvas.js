@@ -27,7 +27,7 @@ async function getCanva(userDB)
 {
 	const	canvas = createCanvas(800, 120);
 	const	ctx = canvas.getContext('2d');
-	const bgPath = path.resolve(__dirname, '../assets/img/level.png');
+	const bgPath = path.resolve('src/assets/img/level.png');
 	const	bg = await loadImage(bgPath);
 
 	ctx.drawImage(bg, 0, 0, canvas.width, canvas.height);
