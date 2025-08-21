@@ -12,7 +12,7 @@ export default {
 		const	user = message.member.user;
 		const	DISBOARD_ID = '302050872383242240';
 
-		xpSystem(user, message);
+
 		if (message.author.id === DISBOARD_ID && message.embeds.length > 0) {
 			const embed = message.embeds[0];
 			if (embed.description && embed.description.includes("Bump effectué")) {
@@ -21,7 +21,9 @@ export default {
 				setTimeout(() => {
 					message.guild.channels.get(process.env.CHAT_CHANNEL_ID).send(`${process.env.REMINDER_EMOJI} It's time to vote! Use \`/bump\` with <@${DISBOARD_ID}>.\n*Thanks to everyone who support us!*`)
 				}, 2 * 60 * 60 * 1000);
-				}
 			}
+		}
+		if (user.bot) return;
+		xpSystem(user, message);
 	}
 }

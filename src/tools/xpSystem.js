@@ -4,7 +4,6 @@ import { config } from 'dotenv'
 config();
 export async function	xpSystem(user, message)
 {
-	if (user.bot) return;
 		try
 		{
 			const	userDB = await userModel.findOne({ id: user.id });
