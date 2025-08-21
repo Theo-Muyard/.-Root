@@ -35,7 +35,7 @@ export async function getProfilView(user, userDB, interaction)
 
 	const	profilEmbed = new EmbedBuilder()
 		.setColor(process.env.BLUE_COLOR)
-		.setTitle(`${user.username}'s Profil`)
+		.setTitle(`${user.username}'s Profile`)
 		.setURL('https://discord.gg/fsDqnqQknR')
 		.setDescription(userDB.description)
 		.setFields(
