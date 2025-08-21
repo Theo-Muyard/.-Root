@@ -13,15 +13,18 @@ export default {
 		const	DISBOARD_ID = '302050872383242240';
 
 
-		if (message.author.id === DISBOARD_ID && message.embeds.length > 0) {
-			const embed = message.embeds[0];
-			if (embed.description && embed.description.includes("Bump effectué")) {
-				message.channel.send(`${process.env.LOVE_EMOJI} Thank you for voting!`);
+		const embed = message.embeds[0];
+		const description = embed?.description || embed?.data?.description;
 
-				setTimeout(() => {
-					message.guild.channels.get(process.env.CHAT_CHANNEL_ID).send(`${process.env.REMINDER_EMOJI} It's time to vote! Use \`/bump\` with <@${DISBOARD_ID}>.\n*Thanks to everyone who support us!*`)
-				}, 2 * 60 * 60 * 1000);
-			}
+		if (description && description.includes("Bump effectué")) {
+			message.channel.send(`${process.env.LOVE_EMOJI} Thank you for voting!`);
+
+			setTimeout(() => {
+				const channel = message.guild.channels.cache.get(process.env.CHAT_CHANNEL_ID);
+				if (channel) {
+					channel.send(`${process.env.REMINDER_EMOJI} It's time to vote! Use \`/bump\` with <@${DISBOARD_ID}>.\n*Thanks to everyone who support us!*`);
+				}
+			}, 2 * 60 * 60 * 1000);
 		}
 		if (user.bot) return;
 		xpSystem(user, message);
