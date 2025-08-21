@@ -2,7 +2,7 @@ import { Events, MessageFlags } from 'discord.js'
 import { config } from 'dotenv'
 import userModel from '../schemas/user.schema.js';
 import { cache } from '../commands/utilities/profil.js'
-import { getProfilView } from '../tools/profil/profil.theme.js';
+import { getProfilView } from '../tools/profile/profile.theme.js';
 
 config();
 export default {
