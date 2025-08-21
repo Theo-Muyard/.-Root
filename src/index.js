@@ -7,7 +7,8 @@ config();
 const	client = new Client({ intents: [
 	GatewayIntentBits.Guilds,
 	GatewayIntentBits.GuildMembers,
-	GatewayIntentBits.GuildMessages
+	GatewayIntentBits.GuildMessages,
+	GatewayIntentBits.MessageContent
 ] });
 
 (async () => {
