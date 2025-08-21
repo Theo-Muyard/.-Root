@@ -1,5 +1,5 @@
 import { config } from 'dotenv'
-import { getDescriptionModal } from '../../tools/profil/profil.theme.js'
+import { getDescriptionModal } from '../../tools/profile/profile.theme.js'
 import { ActionRowBuilder, ComponentType, ButtonBuilder } from 'discord.js';
 
 config();

@@ -16,9 +16,6 @@ export default {
 			const embed = message.embeds[0];
 			const description = embed?.description || embed?.data?.description;
 
-			console.log("[DEBUG] embeds:", message.embeds);
-			console.log("[DEBUG] description:", description);
-
 			if (description && description.includes("Bump effectué")) {
 				message.channel.send(`${process.env.LOVE_EMOJI} Thank you for voting!`);
 

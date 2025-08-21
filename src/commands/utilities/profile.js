@@ -1,8 +1,8 @@
 import { MessageFlags, SlashCommandBuilder } from "discord.js"
 import { config } from 'dotenv'
 import userModel from '../../schemas/user.schema.js'
-import { getProfilView } from '../../tools/profil/profil.theme.js'
-import { buttonCollector } from '../../tools/profil/profile.collector.js'
+import { getProfilView } from '../../tools/profile/profile.theme.js'
+import { buttonCollector } from '../../tools/profile/profile.collector.js'
 
 config();
 
@@ -10,7 +10,7 @@ export const cache = new Map();
 
 export default {
 	data: new SlashCommandBuilder()
-			.setName('profil')
+			.setName('profile')
 			.setDescription('Displays your profile, or that of the person mentioned')
 			.addUserOption(option => option.setName('user').setDescription('The user whose profile will be displayed').setRequired(false)),
 

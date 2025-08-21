@@ -1,4 +1,4 @@
-import getCanva from "./profil.canvas.js";
+import getCanva from "./profile.canvas.js";
 import { config } from "dotenv";
 import { EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ModalBuilder, TextInputBuilder, TextInputStyle } from 'discord.js'
 
